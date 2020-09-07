@@ -1,3 +1,6 @@
+https://leetcode.com/problems/second-highest-salary/
+
+
 Write a SQL query to get the second highest salary from the Employee table.
 
 +----+--------+
@@ -36,3 +39,6 @@ select (select distinct Salary from Employee order by Salary desc limit 1 offset
 SELECT MAX(Salary) AS SecondHighestSalary
 FROM Employee 
 WHERE Salary < (SELECT MAX(Salary) FROM Employee);
+
+
+
