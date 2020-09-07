@@ -57,7 +57,11 @@ SELECT w2.id AS Id FROM Weather AS w1 JOIN Weather AS w2
 ON w1.recordDate = subdate(w2.recordDate,1) 
 WHERE w2.temperature > w1.temperature;
 
-# or
+/* Subtract 10 days from a date and return the date:
+# SELECT SUBDATE("2017-06-15", INTERVAL 10 DAY);
+*/
+
+# or 
 
 SELECT w2.id AS Id FROM Weather AS w1 JOIN Weather AS w2 
 ON  DATEDIFF(w2.recordDate, w1.recordDate) = 1
