@@ -1,5 +1,6 @@
 /*
 
+https://leetcode.com/problems/classes-more-than-5-students/
 
 There is a table courses with columns: student and class
 
@@ -40,3 +41,8 @@ The students should not be counted duplicate in each course.
 
 SELECT class FROM courses GROUP BY class 
 HAVING COUNT(DISTINCT student) >= 5;
+
+
+
+
+
