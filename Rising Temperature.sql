@@ -43,7 +43,7 @@ Result table:
 In 2015-01-02, temperature was higher than the previous day (10 -> 25).
 In 2015-01-04, temperature was higher than the previous day (30 -> 20).
 
-*
+*/
 
 
 # Write your MySQL query statement below
