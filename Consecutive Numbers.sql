@@ -24,8 +24,7 @@ For example, given the above Logs table, 1 is the only number that appears conse
 +-----------------+
 
 
-*
-/
+*/
 
 
 
