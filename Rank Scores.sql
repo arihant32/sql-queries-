@@ -34,5 +34,15 @@ SELECT S1.Score, ( SELECT COUNT(DISTINCT Score) FROM Scores WHERE Score >= S1.Sc
 FROM Scores S1
 ORDER BY S1.Score DESC
 
+/* or */
+
+/* refer this https://www.geeksforgeeks.org/mysql-ranking-functions/ */
+
+
+SELECT Score, DENSE_RANK() OVER ( ORDER BY Score DESC) 'RANK'
+FROM Scores
+ORDER BY Score DESC;
+
+
 
 
