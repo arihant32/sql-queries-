@@ -35,13 +35,19 @@ Max and Jim both have the highest salary in the IT department and Henry has the 
 */
 
 
-# solution one but it's not 100% correct
+
 
 
 
 
 SELECT d.Name AS Department, e.name AS Employee, e.Salary from Employee e INNER JOIN Department d
 ON e.DepartmentId = d.id
-WHERE e.Salary IN (SELECT MAX(Salary) FROM Employee GROUP BY DepartmentId)
+WHERE (e.DepartmentId, e.Salary) IN (SELECT DepartmentId, MAX(Salary) FROM Employee GROUP BY DepartmentId)
+
+
+
+
+
+
 
 
