@@ -59,3 +59,21 @@ where 3 >
 
 
 
+
+# or using drive table
+
+select d.Name as 'Department', dt.Name as 'Employee', dt.Salary 
+from (
+select *, dense_rank() over (partition by DepartmentId order by Salary desc) as 'Ranking' 
+from Employee 
+) dt
+inner join Department d
+on dt.DepartmentId = d.Id 
+where dt.Ranking <=3;
+
+
+
+
+
+
+
